@@ -48,14 +48,33 @@ bash
     php artisan serve
 
 API Routes
+Authentication
 
-    Add Money to Wallet: POST /api/add-money
-    Buy Cookie: POST /api/buy-cookie
+    Registration: POST /register
+    Login: POST /login
+    Logout: POST /logout
+
+Wallet and Cookie
+
+    Add Money to Wallet: POST /add-money
+    Buy Cookie: POST /buy-cookie
+    Subscribe to Cookie Service: POST /subscribe
 
 Web Routes
+Authentication
 
     Login Page: GET /account/login
     Registration Page: GET /account/register
+
+Dashboard and Profile (Authenticated)
+
+    Dashboard: GET /account/dashboard
+    Profile: GET /account/profile
+
+Account Management (Authenticated)
+
+    Update Profile: POST /account/update-profile
+    Logout: GET /account/logout
 
 Special Notes
 
@@ -65,8 +84,8 @@ Special Notes
     Validation, middleware, authentication, authorization, tokens, and gates are implemented where necessary.
     Proper checking of bad or invalid requests is performed.
     Users can add a minimum of $3 and a maximum of $100 to their wallet in a single operation.
-    Users need to buy at least one cookie to perform the "buy a cookie" operation.
+    Users need to buy at least one cookie through subscribe api to perform the "buy a cookie" operation.
 
 Output
 
-The Laravel code is available in this repository. You can also find the Postman collection containing API endpoints exported as a .json file.
+The Laravel code is available in this repository. You can also find the Postman collection containing API endpoints exported as a wallet -APP.postman_collection.json file.
